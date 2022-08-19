@@ -43,9 +43,7 @@ def main():
     rep.eval()
     optimizer = Adam(params=model.parameters(), lr=args.lr, amsgrad=True)
     best_loss = sys.maxsize
-
-    exp_dir_name = os.path.abspath(__file__).split('/')[-2]
-    project_name = f'{exp_dir_name}'
+    project_name = 'bc_reacher'
 
     wandb.init(project=project_name, config=args, entity=args.wandb_entity)
     wandb.run.name = f'lr{args.lr}_hidden{args.hidden_dim}_{wandb.run.id}'

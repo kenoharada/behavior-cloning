@@ -31,7 +31,7 @@ singularity shell --nv bc_env.sif
 
 ```bash
 docker build -t bc_env .
-docker run --gpus all --rm -it --shm-size=48gb -p 5901:5900 -p 8889:8888 --mount type=bind,src=$PWD,dst=/root/bc_template  --name `whoami`_bc bc_env
+docker run --gpus all --rm -it --shm-size=48gb -p 5901:5900 -p 8889:8888 --mount type=bind,src=$PWD,dst=/root/behavior-cloning  --name `whoami`_bc bc_env
 ```
 
 ## Install packages for experiments
